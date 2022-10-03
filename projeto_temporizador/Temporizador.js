@@ -11,13 +11,13 @@ export default class Temporizador {
             controle: buscar.querySelector(".temporizador__botao--controle"),
             parar: buscar.querySelector(".temporizador__botao--parar"),
             setar: buscar.querySelector(".temporizador__botao--setar"),
-            teclado: buscar.querySelector(".temporizador__botao")
+            teclado: document.querySelector("body")
         };
 
         this.tempo_escolhido = null;
         this.segundosRestantes = 0;
         this.minutosRestantes = 0;
-        this.horasRestantes =0;
+        this.horasRestantes = 0;
       
         this.elementos.parar.addEventListener("click", () => {
           this.parar();
@@ -45,17 +45,17 @@ export default class Temporizador {
         this.elementos.setar.addEventListener("click", () => {
             this.parar_tocar_alarme();
             const inserirHoras = prompt("Insira a quantidade de horas do temporizador regressivo:");
-            if (inserirHoras <= 99){
+            if (inserirHoras <= 99 && inserirHoras >= 0 && inserirHoras != null){
                 this.horasRestantes = inserirHoras;
                 this.atualizarTemporizador();
             }
             const inserirMinutos = prompt("Insira a quantidade de minutos do temporizador regressivo:");
-            if (inserirMinutos < 60){
+            if (inserirMinutos < 60 && inserirMinutos >= 0 && inserirMinutos != null){
                 this.minutosRestantes = inserirMinutos;
                 this.atualizarTemporizador();
             }
             const inserirSegundos = prompt("Insira a quantidade de segundos do temporizador regressivo:");
-            if (inserirSegundos < 60){
+            if (inserirSegundos < 60 && inserirSegundos >= 0 && inserirSegundos != null){
                 this.segundosRestantes = inserirSegundos;
                 this.atualizarTemporizador();
             }
@@ -87,7 +87,7 @@ export default class Temporizador {
     }
 
     iniciar() {
-        if (this.segundosRestantes == 0 && this.minutosRestantes == 0 && this.horasRestantes == 0) return;
+        if (this.segundosRestantes == 0 && this.minutosRestantes == 0 && this.horasRestantes == 0) { return;}
 
         this.tempo_escolhido = setInterval(() => {
             if (this.segundosRestantes > 0) {
