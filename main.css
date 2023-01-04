@@ -1,0 +1,43 @@
+body{
+    background-color: #FFA500;
+    margin: 24px;
+}
+
+.temporizador {
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 50px 70px;
+    border-radius: 30px;
+    background: white;
+}
+
+.temporizador__conteudo {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.temporizador__botao {
+    width: 50px;
+    height: 50px;
+    margin-left: 16px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.temporizador__botao--iniciar{
+    background: #00b84c;
+}
+
+.temporizador__botao--pausar{
+    background: #BEBEBE;
+}
+
+.temporizador__botao--parar{
+  background: #FF0000
+}
+
+.temporizador__botao--setar{
+  background: #0000FF
+}
