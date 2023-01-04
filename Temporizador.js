@@ -2,7 +2,7 @@ export default class Temporizador {
     constructor(buscar){
         buscar.innerHTML = Temporizador.getHTML();
 
-        this.alarme = new Audio('alarme.mp3');
+        this.alarme = new Audio('alarme4.mp3');
 
         this.elementos = {
             horas: buscar.querySelector(".temporizador__conteudo--horas"),
