@@ -10,7 +10,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <div class="temporizador"></div>
-    <script src="main.js" type="module"></script>
+    <div class="temporizador">
+        <span class="temporizador__conteudo temporizador__conteudo--horas">00</span>
+        <span class="temporizador__conteudo">:</span>
+        <span class="temporizador__conteudo temporizador__conteudo--minutos">00</span>
+        <span class="temporizador__conteudo">:</span>
+        <span class="temporizador__conteudo temporizador__conteudo--segundos">00</span>
+        <button type="button" class="temporizador__botao temporizador__botao--controle temporizador__botao--iniciar"><span class="material-icons">play_arrow</span></button>
+        <button type="button" class="temporizador__botao temporizador__botao--parar"><span class="material-icons">stop</span></button>
+        <button type="button" class="temporizador__botao temporizador__botao--setar"><span class="material-icons">alarm</span></button>
+    </div>
+    <script src="main.js" defer></script>
 </body>
 </html>
