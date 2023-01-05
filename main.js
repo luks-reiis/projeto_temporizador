@@ -1,4 +1,4 @@
-import Temporizador from "Temporizador.js";
+import Temporizador from "./Temporizador";
 
 new Temporizador(
     document.querySelector(".temporizador")
